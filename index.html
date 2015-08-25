@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html data-ng-app = "myapp" >
+<head>
+
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+    <div ng-controller="Ctrl">
+        <input ng-model="num1">
+        <select ng-options="option for option in action" ng-model="action123"></select>
+        {{action123}}
+        <input ng-model="num2">
+        <button ng-click = "submit()">click</button><span>{{result}}</span>
+        <div>
+            <alert ng-repeat="alert in alert" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+            <!--<button type="button" class='btn btn-default' ng-click="addAlert()">Add Alert</button>-->
+        </div>
+    </div>
+
+
+</body>
+
+<script src = "script/angular.min.js"></script>
+<script src = "App/myapp.js"></script>
+<script src = "App/ui-bootstrap-tpls-0.13.0.min.js"></script>
+
+</html>
